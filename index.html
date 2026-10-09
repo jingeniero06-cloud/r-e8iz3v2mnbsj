@@ -1,0 +1,267 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>SEO Audit · Bay Property Management Group</title>
+<meta name="description" content="Full SEO audit of baymgmtgroup.com, 9 October 2026.">
+<style>
+:root { --ink:#0F172A; --muted:#64748B; --line:#E2E8F0; --soft:#F8FAFC; --navy:#0B1F3A; --accent:#2563EB;
+        --good:#16A34A; --warn:#D97706; --bad:#DC2626; --info:#2563EB; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #E5E7EB; }
+body { font-family: "Segoe UI", "Inter", system-ui, sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.top { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.kicker { color: var(--accent); font-weight: 700; }
+.brand { color: var(--muted); }
+h2 { font-size: 30px; font-weight: 700; letter-spacing: -.02em; margin: 8px 0 22px; line-height: 1.15; }
+h3 { font-size: 14px; font-weight: 700; margin: 0 0 10px; }
+.body { flex: 1; min-height: 0; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.callout + h3 { margin-top: 20px; }
+.legend i.dash { width: 16px; height: 0; border-top: 2px dashed var(--muted); border-radius: 0; vertical-align: 3px; }
+.split.wide-left { grid-template-columns: 1.35fr 1fr; }
+.panel { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.cap { font-size: 10.5px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+.cap.center { text-align: center; margin-top: 16px; }
+.muted { color: var(--muted); font-size: 13px; }
+code, .mono { font-family: "Cascadia Mono", Consolas, monospace; font-size: .86em; }
+code { background: #F1F5F9; padding: 1px 5px; border-radius: 4px; }
+
+
+.lead .big { font-size: 17px; line-height: 1.5; margin-bottom: 18px; }
+.nums { padding-left: 20px; font-size: 14px; line-height: 1.5; }
+.nums li { margin-bottom: 10px; }
+.kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: start; }
+.kpi { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; border-top: 4px solid var(--line); }
+.kpi b { display: block; font-size: 34px; letter-spacing: -.02em; }
+.kpi span { color: var(--muted); font-size: 12.5px; }
+.kpi.good { border-top-color: var(--good); } .kpi.good b { color: var(--good); }
+.kpi.bad { border-top-color: var(--bad); } .kpi.bad b { color: var(--bad); }
+.kpi.warn { border-top-color: var(--warn); } .kpi.warn b { color: var(--warn); }
+
+.pill { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.pill.good { background: #DCFCE7; color: #166534; } .pill.warn { background: #FEF3C7; color: #92400E; }
+.pill.bad { background: #FEE2E2; color: #991B1B; } .pill.info { background: #DBEAFE; color: #1E40AF; }
+
+.scorecard { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.sc-row { display: grid; grid-template-columns: 200px 120px 1fr; align-items: center; gap: 16px; padding: 15px 22px; border-bottom: 1px solid var(--line); }
+.sc-row:last-child { border-bottom: 0; } .sc-row:nth-child(odd) { background: var(--soft); }
+.sc-name { font-weight: 700; font-size: 15px; } .sc-note { font-size: 13.5px; color: #334155; }
+
+.pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.pcard { display: flex; gap: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.pnum { flex: 0 0 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 14px; }
+.ptitle { font-weight: 700; font-size: 14.5px; margin-bottom: 6px; }
+.tag { font-size: 10px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 4px; vertical-align: middle; }
+.prob { font-size: 12px; color: #475569; line-height: 1.45; margin-bottom: 6px; }
+.fix { font-size: 12px; line-height: 1.45; margin-bottom: 8px; }
+.ie .pill { font-size: 10px; margin-right: 4px; }
+
+.chart { width: 100%; height: auto; }
+.chart .grid { stroke: var(--line); stroke-width: 1; } .chart .target { stroke: var(--muted); stroke-dasharray: 4 4; }
+.chart .axis { font-size: 11px; fill: var(--muted); } .chart .val { font-size: 11px; font-weight: 700; fill: var(--bad); }
+.legend { display: flex; gap: 16px; font-size: 11px; color: var(--muted); margin-top: 4px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+.tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.tbl th { text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+.tbl td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl .num { text-align: right; white-space: nowrap; } .tbl td.bad { color: var(--bad); font-weight: 700; } .tbl td.warn { color: var(--warn); font-weight: 700; }
+.tbl.dense td { padding: 6.5px 10px; font-size: 12px; line-height: 1.35; }
+.tbl td.mono { font-size: 11px; word-break: break-all; }
+
+.callout { border-left: 4px solid var(--info); background: var(--soft); border-radius: 0 10px 10px 0; padding: 12px 16px; margin-top: 14px; font-size: 12.5px; line-height: 1.5; }
+.callout b { display: block; margin-bottom: 3px; font-size: 13px; }
+.callout.bad { border-left-color: var(--bad); background: #FEF2F2; } .callout.warn { border-left-color: var(--warn); background: #FFFBEB; }
+
+.hbars { display: grid; gap: 9px; }
+.hb { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.hl { flex: 0 0 auto; color: #334155; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ht { flex: 1; height: 14px; background: #fff; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.hf { display: block; height: 100%; border-radius: 7px; }
+.hf.good { background: var(--good); } .hf.warn { background: var(--warn); } .hf.bad { background: var(--bad); } .hf.info { background: var(--info); }
+.hv { flex: 0 0 64px; text-align: right; font-weight: 700; font-size: 12px; }
+
+.checks { list-style: none; font-size: 13px; line-height: 1.5; }
+.checks li { padding-left: 20px; position: relative; margin-bottom: 9px; }
+.checks li::before { content: ""; position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 2px; background: var(--accent); }
+
+.stats3, .stats4 { display: grid; gap: 12px; margin-bottom: 6px; }
+.stats3 { grid-template-columns: repeat(3, 1fr); } .stats4 { grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
+.stats3 div, .stats4 div { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.stats3 b, .stats4 b { display: block; font-size: 24px; } .stats3 span, .stats4 span { font-size: 11.5px; color: var(--muted); }
+.stats4 .good b { color: var(--good); } .stats4 .warn b { color: var(--warn); }
+
+.roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.phase { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; border-top: 5px solid var(--accent); }
+.phase:nth-child(1) { border-top-color: var(--bad); } .phase:nth-child(2) { border-top-color: var(--warn); } .phase:nth-child(3) { border-top-color: var(--good); }
+.ph-when { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.ph-name { font-size: 19px; font-weight: 700; margin: 4px 0 12px; }
+.phase ul { list-style: none; font-size: 13px; line-height: 1.45; }
+.phase li { padding: 7px 0 7px 22px; border-bottom: 1px dashed var(--line); position: relative; }
+.phase li:last-child { border-bottom: 0; }
+.phase li::before { content: ""; position: absolute; left: 0; top: 11px; width: 12px; height: 12px; border: 2px solid #94A3B8; border-radius: 3px; }
+
+.wgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; }
+.wk { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; border-left: 4px solid var(--good); }
+.wk b { display: block; font-size: 22px; } .wk span { font-size: 12px; color: var(--muted); }
+.method { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.method p { font-size: 12.5px; line-height: 1.55; color: #334155; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+html, body { background: #fff; overflow-x: hidden; }
+body { line-height: 1.5; }
+.split > *, .pgrid > *, .kpis > *, .roadmap > *, .method > *, .wgrid > *, .stats3 > *, .stats4 > *, .finding > *, .sc-row > * { min-width: 0; }
+code, .mono, .callout, .prob, .fix, .sc-note { overflow-wrap: anywhere; }
+.slide { all: unset; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+.navbar { position: sticky; top: 0; z-index: 10; background: rgba(11,31,58,.97); backdrop-filter: blur(6px); }
+.navbar .wrap { display: flex; align-items: center; gap: 22px; height: 56px; }
+.navbar .logo { color: #fff; font-weight: 700; white-space: nowrap; font-size: 14px; }
+.navbar .logo span { color: #93C5FD; font-weight: 600; }
+.navbar nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.navbar nav::-webkit-scrollbar { display: none; }
+.navbar nav a { color: #CBD5E1; text-decoration: none; font-size: 13px; padding: 7px 10px; border-radius: 6px; white-space: nowrap; }
+.navbar nav a:hover, .navbar nav a.on { background: rgba(255,255,255,.1); color: #fff; }
+.hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; padding: 84px 0 64px; }
+.hero::after { content: ""; position: absolute; right: -180px; top: -200px; width: 520px; height: 520px; border-radius: 50%; border: 70px solid rgba(37,99,235,.18); }
+.hero .kick { color: #93C5FD; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; }
+.hero h1 { font-size: clamp(34px, 5.4vw, 58px); line-height: 1.05; letter-spacing: -.03em; margin: 14px 0 10px; max-width: 820px; }
+.hero .url { color: #CBD5E1; font-size: 19px; }
+.hero .meta { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px; border-top: 1px solid rgba(255,255,255,.18); position: relative; z-index: 1; }
+.hero .meta div { padding: 18px 18px 0 0; } .hero .meta b { display: block; font-size: 32px; } .hero .meta span { color: #94A3B8; font-size: 13px; }
+.hero .foot { margin-top: 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #94A3B8; font-size: 13px; }
+.hero .cta { display: inline-block; margin-top: 28px; background: #fff; color: var(--navy); font-weight: 700; padding: 11px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; position: relative; z-index: 1; }
+.sec { padding: 72px 0; } .sec.alt { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.kicker { color: var(--accent); font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+h2 { font-size: clamp(26px, 3.2vw, 34px); margin: 6px 0 28px; }
+h4 { font-size: 15px; margin-bottom: 6px; }
+.intro { font-size: 16px; color: #334155; max-width: 860px; margin-bottom: 22px; }
+.sec.alt .panel { background: #fff; }
+.pcard p { margin: 0; } .pcard h4 { font-size: 15px; }
+.prob, .fix { font-size: 13.5px; }
+.tbl { font-size: 13.5px; } .tbl td.mono { font-size: 12px; }
+.tscroll { overflow-x: auto; }
+.findings { display: grid; gap: 12px; }
+.finding { display: grid; grid-template-columns: 90px 1fr; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; }
+.finding p { font-size: 13.5px; color: #334155; margin-top: 4px; } .finding .urls { font-family: "Cascadia Mono", Consolas, monospace; font-size: 12px; color: var(--muted); word-break: break-word; }
+.stats4 .bad b { color: var(--bad); }
+.dls { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.dl { display: flex; gap: 14px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; text-decoration: none; color: var(--ink); transition: border-color .15s, box-shadow .15s; }
+.dl:hover { border-color: var(--accent); box-shadow: 0 6px 20px rgba(15,23,42,.08); }
+.dl-ic { flex: 0 0 48px; height: 48px; border-radius: 10px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+.dl b { display: block; font-size: 14.5px; } .dl small { color: var(--muted); font-size: 12.5px; }
+footer.site { background: var(--navy); color: #94A3B8; font-size: 13px; padding: 26px 0; }
+footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .split, .split.wide-left, .method, .roadmap { grid-template-columns: 1fr; }
+  .pgrid { grid-template-columns: 1fr 1fr; } .wgrid { grid-template-columns: 1fr 1fr; }
+  .hero .meta { grid-template-columns: 1fr 1fr; } .stats4 { grid-template-columns: 1fr 1fr; }
+  .sc-row { grid-template-columns: 1fr auto; } .sc-note { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .pgrid, .kpis { grid-template-columns: 1fr; } .finding { grid-template-columns: 1fr; gap: 8px; }
+  .navbar .logo { display: none; } .sec { padding: 52px 0; } .hb .hl { width: 120px !important; }
+}
+@media print { .navbar, .hero .cta { display: none; } .sec { padding: 28px 0; break-inside: avoid-page; } }
+</style></head><body>
+<header class="navbar"><div class="wrap"><div class="logo">BMG <span>SEO Audit</span></div><nav><a href="#summary">Summary</a><a href="#scorecard">Scorecard</a><a href="#priorities">Top 5</a><a href="#speed">Speed</a><a href="#indexing">Indexing</a><a href="#full-crawl">Full crawl</a><a href="#links">Links</a><a href="#trust">Trust</a><a href="#content">Content</a><a href="#actions">Actions</a><a href="#roadmap">Roadmap</a><a href="#method">Method</a><a href="#downloads">Downloads</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<div class="kick">Full SEO Audit</div><h1>Bay Property Management Group</h1><div class="url">www.baymgmtgroup.com</div>
+<div class="meta"><div><b>4,758</b><span>URLs crawled</span></div><div><b>5</b><span>templates speed-tested</span></div>
+<div><b>172</b><span>pages content-scored</span></div><div><b>24</b><span>prioritised actions</span></div></div>
+<a class="cta" href="#downloads">Download the deck &amp; files</a>
+<div class="foot"><span>Prepared 9 October 2026</span><span>WordPress · Elementor · WP Rocket · Yoast · Cloudflare APO</span></div>
+</div></div>
+<main><section id="summary" class="sec"><div class="wrap">
+<div class="kicker">Executive summary</div><h2>A strong SEO foundation held back by mobile speed</h2>
+<div class="split"><div class="lead">
+<p class="big">The site is technically healthy: every sitemap URL resolves, schema coverage is excellent and the blog is deep.
+The losses are concentrated in <b>three fixable areas</b>.</p>
+<ol class="nums">
+<li><b>Mobile speed.</b> The hero image is lazy-loaded and three Google tag libraries block the page. LCP is 14 to 19 s in lab tests.</li>
+<li><b>Index hygiene.</b> Redirected and noindex URLs sit in the sitemap, and demo, duplicate and ad-copy pages are indexable.</li>
+<li><b>Template bugs.</b> The footer phone button on every page links to a broken address, and two county contact buttons lead to a 404.</li>
+</ol>
+<p class="muted">The five high-priority fixes are configuration and template changes that can ship in about a week.</p>
+</div><div class="kpis"><div class="kpi good"><b>2,120</b><span>URLs crawled, all HTTP 200</span></div><div class="kpi bad"><b>33</b><span>Mobile performance, homepage</span></div><div class="kpi good"><b>100</b><span>Lighthouse SEO, every page</span></div><div class="kpi good"><b>81%</b><span>E-E-A-T checks passed</span></div><div class="kpi bad"><b>15.1 s</b><span>Mobile LCP, homepage</span></div><div class="kpi warn"><b>5</b><span>High-priority fixes</span></div></div></div></div></section><section id="scorecard" class="sec alt"><div class="wrap">
+<div class="kicker">Overview</div><h2>Scorecard by area</h2><div class="scorecard"><div class="sc-row"><div class="sc-name">Technical SEO</div><span class="pill good">Strong</span><div class="sc-note">All 2,120 URLs return 200, Lighthouse SEO 100, schema on every page.</div></div><div class="sc-row"><div class="sc-name">Mobile speed</div><span class="pill bad">Critical</span><div class="sc-note">Mobile performance 33 to 53. Hero image appears after 14 to 19 s.</div></div><div class="sc-row"><div class="sc-name">Index hygiene</div><span class="pill warn">Needs work</span><div class="sc-note">14 redirects + 42 noindex URLs in sitemap, 8+ indexable duplicates.</div></div><div class="sc-row"><div class="sc-name">Internal links</div><span class="pill warn">Needs work</span><div class="sc-note">Broken footer phone link on every page, 4 broken links, 62 redirect hops.</div></div><div class="sc-row"><div class="sc-name">Content</div><span class="pill good">Good</span><div class="sc-note">Median post 2,097 words. Readability is hard (grade 13). 15 thin pages.</div></div><div class="sc-row"><div class="sc-name">Trust / E-E-A-T</div><span class="pill good">Good</span><div class="sc-note">56 of 69 checks pass. No Terms page, no public email, all links nofollow.</div></div><div class="sc-row"><div class="sc-name">Accessibility</div><span class="pill warn">Needs work</span><div class="sc-note">Lighthouse 76 to 86. Zoom disabled, contrast and label issues.</div></div></div></div></section><section id="priorities" class="sec"><div class="wrap">
+<div class="kicker">Do these first</div><h2>Top 5 priorities</h2><div class="pgrid"><article class="pcard"><div class="pnum">1</div><div>
+<h4>Fix the mobile hero image <span class="tag">Performance</span></h4><p class="prob">WP Rocket lazy-loads the hero background, so the biggest element paints last (LCP 15.1 s on the homepage).</p><p class="fix"><b>Fix:</b> Exclude the hero container from &#x27;LazyLoad for CSS background images&#x27;, or use an &lt;img&gt; with fetchpriority=high, and preload it.</p>
+<div class="ie"><span class="pill bad">Impact High</span> <span class="pill good">Effort Low</span></div></div></article><article class="pcard"><div class="pnum">2</div><div>
+<h4>Cut third-party JavaScript <span class="tag">Performance</span></h4><p class="prob">GTM, a separate GA4 gtag and a separate Ads gtag load ~530 KB; reCAPTCHA adds 356 KB on every page.</p><p class="fix"><b>Fix:</b> Fire GA4 and Ads from inside GTM only. Load reCAPTCHA and Formidable only on form pages or on interaction.</p>
+<div class="ie"><span class="pill bad">Impact High</span> <span class="pill warn">Effort Medium</span></div></div></article><article class="pcard"><div class="pnum">3</div><div>
+<h4>Repair the footer phone button <span class="tag">Links</span></h4><p class="prob">On all 2,120 pages it links to http://(443)%20708-4698, a broken web address.</p><p class="fix"><b>Fix:</b> Change the href to tel:+14437084698 and remove target=_blank and nofollow.</p>
+<div class="ie"><span class="pill bad">Impact High</span> <span class="pill good">Effort Low</span></div></div></article><article class="pcard"><div class="pnum">4</div><div>
+<h4>Clean the XML sitemap <span class="tag">Indexing</span></h4><p class="prob">Lists 14 URLs that redirect elsewhere and 42 job posts marked noindex.</p><p class="fix"><b>Fix:</b> Remove redirected pages; exclude the careers post type in Yoast or make job pages indexable.</p>
+<div class="ie"><span class="pill warn">Impact Medium</span> <span class="pill good">Effort Low</span></div></div></article><article class="pcard"><div class="pnum">5</div><div>
+<h4>Remove duplicate and leftover pages <span class="tag">Indexing</span></h4><p class="prob">A theme demo post, a &#x27;-duplicate&#x27; page, two &#x27;-ga&#x27; ad copies and duplicate post pairs are all indexable.</p><p class="fix"><b>Fix:</b> Delete or 301 the demo and duplicate pages, merge post pairs, noindex the &#x27;-ga&#x27; pages and /unsubscribe/.</p>
+<div class="ie"><span class="pill warn">Impact Medium</span> <span class="pill good">Effort Low</span></div></div></article></div></div></section><section id="speed" class="sec alt"><div class="wrap">
+<div class="kicker">Performance</div><h2>Mobile speed is the biggest gap</h2>
+<div class="split wide-left">
+<div class="panel"><svg viewBox="0 0 620 300" class="chart"><line x1="40" x2="610" y1="266.0" y2="266.0" class="grid"/><text x="32" y="270.0" class="axis" text-anchor="end">0</text><line x1="40" x2="610" y1="203.0" y2="203.0" class="grid"/><text x="32" y="207.0" class="axis" text-anchor="end">25</text><line x1="40" x2="610" y1="140.0" y2="140.0" class="grid"/><text x="32" y="144.0" class="axis" text-anchor="end">50</text><line x1="40" x2="610" y1="77.0" y2="77.0" class="grid"/><text x="32" y="81.0" class="axis" text-anchor="end">75</text><line x1="40" x2="610" y1="14.0" y2="14.0" class="grid"/><text x="32" y="18.0" class="axis" text-anchor="end">100</text><line x1="40" x2="610" y1="39.2" y2="39.2" class="target"/><rect x="51.0" y="182.8" width="20.0" height="83.2" rx="2" fill="var(--bad)"/><text x="61.0" y="177.8" class="val" text-anchor="middle">33</text><rect x="74.0" y="59.4" width="20.0" height="206.6" rx="2" fill="var(--warn)"/><rect x="97.0" y="77.0" width="20.0" height="189.0" rx="2" fill="var(--info)"/><rect x="120.0" y="14.0" width="20.0" height="252.0" rx="2" fill="var(--good)"/><text x="97.0" y="288" class="axis" text-anchor="middle">Home</text><rect x="165.0" y="152.6" width="20.0" height="113.4" rx="2" fill="var(--bad)"/><text x="175.0" y="147.6" class="val" text-anchor="middle">45</text><rect x="188.0" y="51.8" width="20.0" height="214.2" rx="2" fill="var(--warn)"/><rect x="211.0" y="77.0" width="20.0" height="189.0" rx="2" fill="var(--info)"/><rect x="234.0" y="14.0" width="20.0" height="252.0" rx="2" fill="var(--good)"/><text x="211.0" y="288" class="axis" text-anchor="middle">Services</text><rect x="279.0" y="162.7" width="20.0" height="103.3" rx="2" fill="var(--bad)"/><text x="289.0" y="157.7" class="val" text-anchor="middle">41</text><rect x="302.0" y="74.5" width="20.0" height="191.5" rx="2" fill="var(--warn)"/><rect x="325.0" y="77.0" width="20.0" height="189.0" rx="2" fill="var(--info)"/><rect x="348.0" y="14.0" width="20.0" height="252.0" rx="2" fill="var(--good)"/><text x="325.0" y="288" class="axis" text-anchor="middle">Baltimore</text><rect x="393.0" y="167.7" width="20.0" height="98.3" rx="2" fill="var(--bad)"/><text x="403.0" y="162.7" class="val" text-anchor="middle">39</text><rect x="416.0" y="49.3" width="20.0" height="216.7" rx="2" fill="var(--warn)"/><rect x="439.0" y="77.0" width="20.0" height="189.0" rx="2" fill="var(--info)"/><rect x="462.0" y="14.0" width="20.0" height="252.0" rx="2" fill="var(--good)"/><text x="439.0" y="288" class="axis" text-anchor="middle">Fees &amp; rates</text><rect x="507.0" y="132.4" width="20.0" height="133.6" rx="2" fill="var(--bad)"/><text x="517.0" y="127.4" class="val" text-anchor="middle">53</text><rect x="530.0" y="56.8" width="20.0" height="209.2" rx="2" fill="var(--warn)"/><rect x="553.0" y="77.0" width="20.0" height="189.0" rx="2" fill="var(--info)"/><rect x="576.0" y="14.0" width="20.0" height="252.0" rx="2" fill="var(--good)"/><text x="553.0" y="288" class="axis" text-anchor="middle">Blog index</text></svg><div class="legend"><span><i style="background:var(--bad)"></i>Performance</span><span><i style="background:var(--warn)"></i>Accessibility</span><span><i style="background:var(--info)"></i>Best practices</span><span><i style="background:var(--good)"></i>SEO</span><span><i class="dash"></i>Good threshold (90)</span></div><p class="cap">Lighthouse 12.8.2 · mobile preset, simulated throttling · lab run 9 October 2026</p></div>
+<div><div class="tscroll"><table class="tbl"><thead><tr><th>Page</th><th class="num">Perf.</th><th class="num">LCP</th><th class="num">Blocking</th></tr></thead><tbody><tr><td>Home</td><td class="num">33</td><td class="num bad">15.1 s</td><td class="num">1,760 ms</td></tr><tr><td>Services</td><td class="num">45</td><td class="num bad">4.5 s</td><td class="num">1,710 ms</td></tr><tr><td>Baltimore</td><td class="num">41</td><td class="num bad">19.3 s</td><td class="num">650 ms</td></tr><tr><td>Fees &amp; rates</td><td class="num">39</td><td class="num bad">14.4 s</td><td class="num">770 ms</td></tr><tr><td>Blog index</td><td class="num">53</td><td class="num warn">3.7 s</td><td class="num">1,490 ms</td></tr></tbody></table></div>
+<div class="callout bad"><b>Root cause</b>The LCP element is the Elementor hero container. WP Rocket defers its background image, so it starts downloading only after scripts run.</div>
+<div class="callout"><b>Desktop is fine</b>Homepage desktop: performance 96, LCP 1.3 s. Server response is 30–50 ms, so this is purely front-end.</div></div>
+</div>
+<div class="split" style="margin-top:28px">
+<div class="panel"><h3>Script and asset weight on first load</h3>
+<div class="hbars"><div class="hb"><span class="hl" style="width:200px">Google tag libraries (×3)</span><span class="ht"><span class="hf bad" style="width:96.4%"></span></span><span class="hv">~530 KB</span></div><div class="hb"><span class="hl" style="width:200px">reCAPTCHA</span><span class="ht"><span class="hf bad" style="width:64.7%"></span></span><span class="hv">356 KB</span></div><div class="hb"><span class="hl" style="width:200px">Formidable Forms JS</span><span class="ht"><span class="hf warn" style="width:27.3%"></span></span><span class="hv">150 KB</span></div><div class="hb"><span class="hl" style="width:200px">Facebook pixel</span><span class="ht"><span class="hf warn" style="width:20.5%"></span></span><span class="hv">113 KB</span></div><div class="hb"><span class="hl" style="width:200px">Hero image (oversized)</span><span class="ht"><span class="hf info" style="width:7.8%"></span></span><span class="hv">43 KB</span></div></div>
+<div class="stats3" style="margin-top:16px"><div><b>1.6–2.6 MB</b><span>total page weight</span></div><div><b>3.2 s</b><span>JavaScript execution</span></div><div><b>4,833</b><span>DOM elements (Baltimore)</span></div></div></div>
+<div><h3>Recommended changes</h3><ul class="checks">
+<li><b>One tag manager.</b> Fire GA4 and Google Ads from inside GTM instead of separate gtag scripts.</li>
+<li><b>Forms on demand.</b> Load reCAPTCHA and Formidable only on pages with a form, or on first interaction.</li>
+<li><b>Hero first.</b> Exclude the hero from background lazy-load, preload it, serve a 400 px mobile image.</li>
+<li><b>Delay marketing pixels</b> until the page is interactive (WP Rocket "Delay JS").</li></ul>
+<p class="cap">Target after fixes: mobile LCP under 2.5 s and Total Blocking Time under 300 ms.</p></div>
+</div></div></section><section id="indexing" class="sec"><div class="wrap">
+<div class="kicker">Indexing</div><h2>Crawl and indexing health</h2>
+<div class="split"><div class="tscroll"><table class="tbl"><thead><tr><th>Check</th><th class="num">Result</th><th>Status</th></tr></thead><tbody><tr><td>Sitemap URLs returning 200</td><td class="num">2,120 / 2,120</td><td><span class="pill good">OK</span></td></tr><tr><td>og:image on every page</td><td class="num">2,120 / 2,120</td><td><span class="pill good">OK</span></td></tr><tr><td>Article + Person schema on posts</td><td class="num">1,883 / 1,885</td><td><span class="pill good">OK</span></td></tr><tr><td>Tag archives and staging pages noindexed</td><td class="num">1,633 + 9</td><td><span class="pill good">OK</span></td></tr><tr><td>Sitemap URLs that redirect</td><td class="num">14</td><td><span class="pill warn">Fix</span></td></tr><tr><td>Noindex URLs in sitemap</td><td class="num">42</td><td><span class="pill warn">Fix</span></td></tr><tr><td>Missing meta description</td><td class="num">99</td><td><span class="pill warn">Fix</span></td></tr><tr><td>Duplicate title groups</td><td class="num">10</td><td><span class="pill warn">Fix</span></td></tr><tr><td>Titles over 60 characters</td><td class="num">977</td><td><span class="pill info">Review</span></td></tr><tr><td>Pages with no H1 / two H1s</td><td class="num">5 / 12</td><td><span class="pill warn">Fix</span></td></tr></tbody></table></div>
+<div><div class="stats3"><div><b>1,885</b><span>blog posts</span></div><div><b>143</b><span>pages</span></div><div><b>92</b><span>categories + careers</span></div></div>
+<div class="callout warn"><b>Sitemap needs a clean-up</b>14 URLs in the sitemap redirect elsewhere (Cumberland, Lancaster and York County pages, baltimore-city-md, 3 resource pages) and all 42 career posts are noindex.</div>
+<div class="callout"><b>robots.txt glitch</b>The rule <code>Disallow: /*&amp;amp;s=</code> contains an HTML-escaped ampersand and never matches. It should be <code>Disallow: /*&amp;s=</code>.</div></div></div></div></section><section id="full-crawl" class="sec alt"><div class="wrap">
+<div class="kicker">Full-site crawl · 4,758 URLs</div><h2>What the full crawl added</h2>
+<p class="intro">After the sitemap audit we crawled every URL reachable through links, not just the 2,120 in the sitemap:
+4,758 URLs including 1,934 tag archives, 449 category archives and 189 pagination pages. It confirmed the original findings,
+found no live pages missing from the sitemap, and turned up these additional issues.</p>
+<div class="stats4"><div><b>4,758</b><span>URLs crawled</span></div><div class="good"><b>4,751</b><span>returned HTTP 200</span></div>
+<div class="bad"><b>6</b><span>broken (404) targets</span></div><div class="warn"><b>215</b><span>internal links via redirects</span></div></div>
+<div class="findings"><div class="finding"><div><span class="pill bad">High</span></div><div><h4>County contact button goes to 404 (Chester County)</h4><p class="urls">https://www.baymgmtgroup.com/property-management-chester-county/contact-us/?location=pennsylvania&amp;pa-county=chester%20county</p><p><b>Fix:</b> Page loads without the ?location= query but 404s with it; fix the page/query handling or drop the query from the button link</p></div></div><div class="finding"><div><span class="pill bad">High</span></div><div><h4>County contact button goes to 404 (Prince George&#x27;s County)</h4><p class="urls">https://www.baymgmtgroup.com/property-management-prince-georges-county-md/contact-us/?location=maryland&amp;md-county=prince%20georges%20county</p><p><b>Fix:</b> Same as Chester County</p></div></div><div class="finding"><div><span class="pill warn">Medium</span></div><div><h4>Discontinued PA county pages still linked internally and redirect to the homepage</h4><p class="urls">/property-management-lancaster-county-pa/, /property-management-cumberland-county/, /york-county-pa-property-management/ (+ their /contact-us/, /team/, /blog/ and resources pages)</p><p><b>Fix:</b> Remove or update the internal links; redirect each old page to the closest relevant page (e.g. /contact/ or a nearby county page) rather than the homepage</p></div></div><div class="finding"><div><span class="pill warn">Medium</span></div><div><h4>Two-hop redirect chains</h4><p class="urls">/property-management-dauphin-county/ and /property-management-company-in-harrisburg/ -&gt; /york-county-pa-property-management/ -&gt; /; /philadelphia/contact/ -&gt; /philadelphia/contact-us/ -&gt; /philadelphia/; /laurel-contact-us/ -&gt; /property-management-companies-washington-dc/contact-us/ -&gt; /property-management-companies-washington-dc/; /property-management-in-baltimore/property-management-forms/ -&gt; /property-management-in-baltimore-city-md/contact-us/ -&gt; /property-management-in-baltimore/</p><p><b>Fix:</b> Point each redirect straight at its final URL and update internal links</p></div></div><div class="finding"><div><span class="pill warn">Medium</span></div><div><h4>Internal links carry tracking parameters</h4><p class="urls">?utm_source=google&amp;utm_campaign=gmb on ~19 location pages; ?utm_source=chatgpt.com on 5 pages</p><p><b>Fix:</b> Remove UTM parameters from internal links (they skew GBP/ChatGPT attribution in Analytics and create duplicate crawl URLs; canonicals already point to the clean URL)</p></div></div><div class="finding"><div><span class="pill info">Low</span></div><div><h4>Large noindex tag/category archive footprint</h4><p class="urls">1,934 tag archives + 449 category archives + 189 pagination pages</p><p><b>Fix:</b> Tags are already noindex so no index bloat, but ~2,500 thin archive URLs consume crawl budget; consolidate tags and consider removing tag links from posts</p></div></div><div class="finding"><div><span class="pill info">Low</span></div><div><h4>Archive /page/1/ links redirect</h4><p class="urls">~40 /blog/tag/*/page/1/ and /blog/category/*/page/1/ URLs</p><p><b>Fix:</b> Link page 1 to the archive root</p></div></div></div></div></section><section id="links" class="sec"><div class="wrap">
+<div class="kicker">Links &amp; indexing</div><h2>Broken links and duplicate pages</h2>
+<div class="callout bad"><b>Sitewide: broken footer phone button</b>Every page links to <code>http://(443)%20708-4698</code>. Tapping it on mobile opens an error instead of dialling. Change it to <code>tel:+14437084698</code>.</div>
+<div class="split" style="margin-top:22px"><div><h3>Broken internal links (404)</h3><div class="tscroll"><table class="tbl"><thead><tr><th>URL</th><th class="num">Linking pages</th></tr></thead><tbody><tr><td class="mono">/washington-dc-staging/</td><td class="num">6</td></tr><tr><td class="mono">/property-management-in-baltimore/mt-vernon/</td><td class="num">3</td></tr><tr><td class="mono">/blog/what-terms-should-be-included-in-a-lease-agreement/</td><td class="num">1</td></tr><tr><td class="mono">/property-management-in-philadelphia/</td><td class="num">1</td></tr></tbody></table></div>
+<p class="cap">Plus the two county contact buttons in the full-crawl section. 62 link targets go through a redirect, including /contact on 2,087 pages.</p></div>
+<div><h3>Indexable duplicates and leftovers</h3><div class="tscroll"><table class="tbl"><thead><tr><th>URL</th><th>Problem</th></tr></thead><tbody><tr><td class="mono">/blog/velkommen-til-bloggen-min/</td><td>Theme demo post</td></tr><tr><td class="mono">/philadelphia/temple-university-property-management-duplicate/</td><td>Duplicate page</td></tr><tr><td class="mono">/baltimore-property-management-company-ga/</td><td>Ad landing copy</td></tr><tr><td class="mono">/property-management-company-in-northern-virginia-ga/</td><td>Ad landing copy</td></tr><tr><td class="mono">/blog/budget-home-improvement-ideas/ + …-on-a-budget/</td><td>Duplicate posts</td></tr><tr><td class="mono">/blog/going-green-reducing-your-rental-…impact/ (×2)</td><td>Duplicate posts</td></tr><tr><td class="mono">/unsubscribe/</td><td>Utility page</td></tr></tbody></table></div>
+<p class="cap">The demo post's title is "Just another post with A Gallery". All are indexable with self-referencing canonicals.</p></div></div></div></section><section id="trust" class="sec alt"><div class="wrap">
+<div class="kicker">Trust</div><h2>Trust signals (E-E-A-T)</h2>
+<div class="split"><div class="panel"><h3>Checks passed by category · 56 of 69 overall</h3>
+<div class="hbars"><div class="hb"><span class="hl" style="width:170px">Authority &amp; technical</span><span class="ht"><span class="hf good" style="width:100.0%"></span></span><span class="hv">10/10</span></div><div class="hb"><span class="hl" style="width:170px">Homepage checks</span><span class="ht"><span class="hf good" style="width:100.0%"></span></span><span class="hv">5/5</span></div><div class="hb"><span class="hl" style="width:170px">WordPress leftovers</span><span class="ht"><span class="hf good" style="width:100.0%"></span></span><span class="hv">3/3</span></div><div class="hb"><span class="hl" style="width:170px">On-site E-E-A-T</span><span class="ht"><span class="hf good" style="width:83.3%"></span></span><span class="hv">10/12</span></div><div class="hb"><span class="hl" style="width:170px">UX elements</span><span class="ht"><span class="hf good" style="width:80.0%"></span></span><span class="hv">4/5</span></div><div class="hb"><span class="hl" style="width:170px">About Us page</span><span class="ht"><span class="hf warn" style="width:77.8%"></span></span><span class="hv">7/9</span></div><div class="hb"><span class="hl" style="width:170px">Social presence</span><span class="ht"><span class="hf warn" style="width:75.0%"></span></span><span class="hv">6/8</span></div><div class="hb"><span class="hl" style="width:170px">Footer E-E-A-T</span><span class="ht"><span class="hf warn" style="width:70.0%"></span></span><span class="hv">7/10</span></div><div class="hb"><span class="hl" style="width:170px">E-E-A-T pages</span><span class="ht"><span class="hf bad" style="width:57.1%"></span></span><span class="hv">4/7</span></div></div>
+<p class="cap">Source: WordPress 69-point E-E-A-T audit on the homepage</p></div>
+<div><h3>Gaps worth closing</h3><ul class="checks">
+<li><b>No Terms of Service page.</b> Also required for SMS consent on the lead forms.</li>
+<li><b>No public email address</b> in the footer or page HTML.</li>
+<li><b>Every external link is nofollow,</b> including the sister site texasbmg.com, social profiles and NMLS.</li>
+<li><b>No editorial guidelines</b> for a 1,885-post blog.</li>
+<li><b>6 generic "Read More" links</b> on the homepage without descriptive labels.</li></ul></div></div></div></section><section id="content" class="sec"><div class="wrap">
+<div class="kicker">Content</div><h2>Deep, but hard to read</h2>
+<div class="split"><div><div class="stats4"><div class="good"><b>95</b><span>median quality score</span></div><div class="warn"><b>37</b><span>Flesch reading ease</span></div>
+<div class="warn"><b>13</b><span>grade level</span></div><div><b>2,097</b><span>median post words</span></div></div>
+<ul class="checks"><li><b>Readability.</b> Copy reads at college level. Aim for grade 8 to 10 on service and city pages.</li>
+<li><b>Repetition.</b> "Property management" exceeds 3.5% on 71 of 172 sampled pages. The brand name inflates this.</li>
+<li><b>Structure.</b> 12 posts have two H1s; 5 pages have none. 977 titles exceed 60 characters.</li></ul></div>
+<div class="panel"><h3>Thinnest indexable pages</h3><div class="hbars"><div class="hb"><span class="hl" style="width:200px">/locations/maryland/</span><span class="ht"><span class="hf bad" style="width:22.7%"></span></span><span class="hv">68 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/dauphin-county/</span><span class="ht"><span class="hf warn" style="width:39.0%"></span></span><span class="hv">117 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/chester-county/</span><span class="ht"><span class="hf warn" style="width:39.7%"></span></span><span class="hv">119 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/baltimore-city/</span><span class="ht"><span class="hf warn" style="width:42.3%"></span></span><span class="hv">127 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/harford-county/</span><span class="ht"><span class="hf warn" style="width:42.3%"></span></span><span class="hv">127 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/bucks-county/</span><span class="ht"><span class="hf warn" style="width:43.0%"></span></span><span class="hv">129 words</span></div><div class="hb"><span class="hl" style="width:200px">…/resources/delaware-county/</span><span class="ht"><span class="hf warn" style="width:43.0%"></span></span><span class="hv">129 words</span></div><div class="hb"><span class="hl" style="width:200px">/locations/</span><span class="ht"><span class="hf warn" style="width:43.7%"></span></span><span class="hv">131 words</span></div></div>
+<p class="cap">Expand each county resource page with local landlord rules, licensing and fees, or merge them into one hub.</p></div></div></div></section><section id="actions" class="sec alt"><div class="wrap">
+<div class="kicker">Action plan</div><h2>Remaining actions</h2><div class="tscroll"><table class="tbl"><thead><tr><th>Priority</th><th>Area</th><th>Issue</th><th>Fix</th></tr></thead><tbody><tr><td><span class="pill warn">Medium</span></td><td>Links</td><td><b>4 broken internal links</b></td><td>/washington-dc-staging/ (6 pages), /property-management-in-baltimore/mt-vernon/ (3), 2 blog links.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Links</td><td><b>62 internal links through redirects</b></td><td>Link menu/footer to /contact/ (2,087 pages); update Harrisburg, Towson, Owings Mills, Parkville, Silver Spring links.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Trust</td><td><b>All external links are nofollow</b></td><td>Remove nofollow from texasbmg.com, social profiles and NMLS.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Trust</td><td><b>No Terms of Service or public email</b></td><td>Publish Terms (also needed for SMS consent); add an email to the footer.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Content</td><td><b>Copy reads at college level</b></td><td>Median grade 13. Shorten sentences on service and city pages; target grade 8 to 10.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Content</td><td><b>15 thin county resource pages</b></td><td>117 to 170 words each. Expand with local rules and fees, or merge into one hub.</td></tr><tr><td><span class="pill warn">Medium</span></td><td>Accessibility</td><td><b>Zoom disabled, contrast, labels</b></td><td>Remove user-scalable=no; fix contrast, unlabeled links/fields, iframe titles.</td></tr><tr><td><span class="pill info">Low</span></td><td>Content</td><td><b>Long titles, missing category metas</b></td><td>977 titles over 60 characters; 50 category pages without meta descriptions.</td></tr><tr><td><span class="pill info">Low</span></td><td>Content</td><td><b>H1 structure</b></td><td>12 posts with two H1s; /blog/, /privacy-policy/, /sitemap/, /locations/maryland/ have none.</td></tr><tr><td><span class="pill info">Low</span></td><td>Accessibility</td><td><b>Author avatar alt text</b></td><td>6,113 images on 1,912 pages. One fix in the post template&#x27;s author box.</td></tr><tr><td><span class="pill info">Low</span></td><td>Content</td><td><b>&#x27;Property management&#x27; repetition</b></td><td>Kensington 6.9%, Germantown 6.5%, Fishtown 6.1%. Brand name inflates density.</td></tr><tr><td><span class="pill info">Low</span></td><td>Indexing</td><td><b>robots.txt and slug glitches</b></td><td>&#x27;Disallow: /*&amp;amp;s=&#x27; should be &#x27;/*&amp;s=&#x27;; valley-forge slug has a hidden Unicode character.</td></tr></tbody></table></div></div></section><section id="roadmap" class="sec"><div class="wrap">
+<div class="kicker">Next steps</div><h2>Suggested roadmap</h2><div class="roadmap"><div class="phase"><div class="ph-when">Week 1</div><div class="ph-name">Quick wins</div><ul><li>Repair the footer phone link</li><li>Exclude hero from WP Rocket background lazy-load; preload hero</li><li>Clean sitemap (redirects, careers)</li><li>Delete demo post, &#x27;-duplicate&#x27; page; noindex &#x27;-ga&#x27; pages and /unsubscribe/</li><li>Fix 4 broken links and robots.txt</li></ul></div><div class="phase"><div class="ph-when">Weeks 2–3</div><div class="ph-name">Speed and trust</div><ul><li>Consolidate Google tags into GTM</li><li>Load reCAPTCHA and Formidable only on form pages</li><li>Remove nofollow from trusted links</li><li>Publish Terms of Service; add footer email</li><li>Enable pinch-zoom; fix contrast and labels</li></ul></div><div class="phase"><div class="ph-when">Month 2</div><div class="ph-name">Content</div><ul><li>Expand or merge 15 county resource pages</li><li>Simplify copy on top service and city pages</li><li>Merge duplicate post pairs; update redirecting links</li><li>Category meta descriptions; shorten long titles</li><li>Re-test Lighthouse and check Search Console CWV</li></ul></div></div><p class="cap center">Timeline is an estimate for one WordPress developer. Re-run the audit after Month 2 to measure the change.</p></div></section><section id="method" class="sec alt"><div class="wrap">
+<div class="kicker">Strengths &amp; method</div><h2>What is already working, and how we measured</h2>
+<div class="wgrid"><div class="wk"><b>2,120 / 2,120</b><span>sitemap URLs return HTTP 200</span></div><div class="wk"><b>30–50 ms</b><span>HTML response via Cloudflare APO</span></div><div class="wk"><b>100</b><span>Lighthouse SEO on every page tested</span></div><div class="wk"><b>96</b><span>desktop performance on the homepage</span></div><div class="wk"><b>2,097</b><span>median words per blog post</span></div><div class="wk"><b>552</b><span>posts updated during 2026</span></div><div class="wk"><b>288</b><span>URLs with FAQ schema</span></div><div class="wk"><b>1,633</b><span>tag archives correctly noindexed</span></div></div>
+<div class="method"><div><h3>Method</h3><p>Crawl of all 2,120 sitemap URLs, then a full link crawl of 4,758 URLs (status, redirects, titles, meta, H1, canonical,
+robots, schema, images). Content and E-E-A-T scripts on the homepage and 172 pages. Lighthouse 12.8.2 on five templates.
+Suspicious results were re-checked against the raw HTML.</p></div>
+<div><h3>Not covered</h3><p>Backlinks, rankings, Google Business Profiles, Search Console and real-user CrUX data. Speed figures are lab
+measurements; confirm them in Search Console's Core Web Vitals report.</p></div></div></div></section><section id="downloads" class="sec"><div class="wrap">
+<div class="kicker">Files</div><h2>Downloads</h2><div class="dls"><a class="dl" href="files/Bay-Property-Management-Group-SEO-Audit-Deck-2026-10-09.pdf" download><span class="dl-ic">PDF</span><span><b>Presentation deck</b><small>13 slides · PDF</small></span></a><a class="dl" href="files/Bay-Property-Management-Group-SEO-Audit-2026-10-09.pdf" download><span class="dl-ic">PDF</span><span><b>Detailed written report</b><small>6 pages · PDF</small></span></a><a class="dl" href="files/Bay-SEO-Audit-Issue-Lists.zip" download><span class="dl-ic">ZIP</span><span><b>Issue spreadsheets</b><small>Every affected URL · 10 CSVs</small></span></a><a class="dl" href="files/new-findings-from-full-crawl.csv" download><span class="dl-ic">CSV</span><span><b>Full-crawl findings</b><small>7 issues · CSV</small></span></a></div></div></section></main>
+<footer class="site"><div class="wrap"><span>Bay Property Management Group · Full SEO Audit · 9 October 2026</span><span>Confidential. Prepared for internal review.</span></div></footer>
+<script>
+const links=[...document.querySelectorAll('.navbar nav a')];
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section.sec').forEach(s=>io.observe(s));
+</script></body></html>
